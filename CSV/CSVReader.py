@@ -89,6 +89,6 @@ def plot_halves(datePrice):
         x.clear()
         y.clear()
     plt.show()
-halves = open_CSV('BTCPrice.csv')
+halves = open_CSV('CSV\BTCPrice.csv')
 plot_halves(halves)
 #print(len(every_4_years))
