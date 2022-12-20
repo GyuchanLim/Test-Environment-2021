@@ -1,4 +1,5 @@
 import csv
+import os
 import copy
 import datetime
 import matplotlib.pyplot as plt
@@ -12,7 +13,7 @@ def open_CSV(fileName):
     with open(fileName, newline='') as csvfile:
         spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
         for row in spamreader:
-            if row[0] == 'ï»¿Timestamp':
+            if row[0] == '\ufeffTimestamp':
                 continue
             else:
                 time, price = row
@@ -89,6 +90,7 @@ def plot_halves(datePrice):
         x.clear()
         y.clear()
     plt.show()
-halves = open_CSV('CSV\BTCPrice.csv')
+
+halves = open_CSV(os.getcwd()+'/CSV/BTCPrice.csv')
 plot_halves(halves)
 #print(len(every_4_years))
