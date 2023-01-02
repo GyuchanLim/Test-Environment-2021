@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 priceList = []
 every_4_years = []
-halving_dates = ['2012-11','2016-07','2020-05','TBD']
+halving_dates = ['2012-11-28','2016-07-9','2020-05-11','TBD']
 
 non_zero = True
 def open_CSV(fileName):
